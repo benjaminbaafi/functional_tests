@@ -1,13 +1,18 @@
 from contant import done
 
 
-def factorial_recursive(n):
-    """Calculate factorial of n using recursion."""
-    if n == 0 or n == 1:
-        return 1
+def factorial_tr(n: int) -> int:
+    if n < 0:
+        raise ValueError("The Fact blah blah blah is nt defined for negative numbers")
+    return fact_tail(n, 1)
+    
+def fact_tail(n, acc=1):
+    if n == 0:
+        return acc
     else:
-        return n * factorial_recursive(n - 1)
+        return fact_tail(n - 1, n * acc)
     
     
 if __name__ == "__main__":
-    print(factorial_recursive(5), done)  
+    print(factorial_tr(5))  
+    print(done) 

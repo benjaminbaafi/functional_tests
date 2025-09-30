@@ -1,3 +1,6 @@
+from contant import done
+
+
 def factorial_recursive(n):
     """Calculate factorial of n using recursion."""
     if n == 0 or n == 1:
@@ -7,4 +10,4 @@ def factorial_recursive(n):
     
     
 if __name__ == "__main__":
-    print(factorial_recursive(5))  
+    print(factorial_recursive(5), done)  
